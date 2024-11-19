@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Question < ApplicationRecord
-  TYPES = %w[MultipleChoice ESSAY].freeze
+  TYPES = %w[MultipleChoice Essay].freeze
 
   has_many :quiz_questions
   has_many :answers
@@ -10,7 +10,7 @@ class Question < ApplicationRecord
 
   validates :statement, presence: true
   validates :type, presence: true, inclusion: { in: TYPES }
-  validates :allow_multiple_answers, inclusion: { in: [true, false] }
+  validates :allow_multiple_answers, inclusion: { in: [ true, false ] }
 
   enum type: { multiple_choice: 0, essay: 1 }
 end

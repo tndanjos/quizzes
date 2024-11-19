@@ -6,5 +6,5 @@ class Answer < ApplicationRecord
 
   validates :question_id, presence: true
   validates :response, presence: true
-  validates :correct, presence: true, inclusion: { in: [true, false] }
+  validates :correct, presence: true, inclusion: { in: [ true, false ] }
 end
