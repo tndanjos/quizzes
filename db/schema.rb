@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_13_021118) do
 
   create_table "questions", force: :cascade do |t|
     t.text "statement", null: false
-    t.integer "type", default: 0, null: false
+    t.integer "kind", default: 0, null: false
     t.text "tip"
     t.boolean "allow_multiple_answers", default: false
     t.datetime "created_at", null: false
