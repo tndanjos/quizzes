@@ -3,3 +3,15 @@ taggable_one:
   tag_id: 1
   taggable_id: 1
   taggable_type: "Quiz"
+
+taggable_two:
+  id: 2
+  tag_id: 1
+  taggable_id: 1
+  taggable_type: "Question"
+
+taggable_three:
+  id: 3
+  tag_id: 1
+  taggable_id: 1
+  taggable_type: "Answer"

@@ -6,6 +6,7 @@ require "active_support/core_ext/integer/time"
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+  config.cssbundling.skip_css_build = true if config.respond_to?(:cssbundling)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # While tests run files are not watched, reloading is not necessary.
