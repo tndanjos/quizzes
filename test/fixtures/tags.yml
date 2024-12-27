@@ -1,0 +1,6 @@
+tag_one:
+  id: 1
+  name: "Science"
+  color: "#FF5733"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

@@ -1,0 +1,6 @@
+quiz_one:
+  id: 1
+  title: "Sample Quiz One"
+  description: "This is a sample quiz."
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
