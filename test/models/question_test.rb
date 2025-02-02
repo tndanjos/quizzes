@@ -25,12 +25,6 @@ class QuestionTest < ActiveSupport::TestCase
     assert_includes @question.errors[:kind], "can't be blank"
   end
 
-  test "should require allow_multiple_answers to be true or false" do
-    @question.allow_multiple_answers = nil
-    assert_not @question.valid?, "Question is valid without allow_multiple_answers"
-    assert_includes @question.errors[:allow_multiple_answers], "is not included in the list"
-  end
-
   test "should have many quiz_questions" do
     assert_respond_to @question, :quiz_questions
   end

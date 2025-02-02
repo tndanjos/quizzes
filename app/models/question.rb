@@ -10,7 +10,6 @@ class Question < ApplicationRecord
 
   validates :statement, presence: true
   validates :kind, presence: true
-  validates :allow_multiple_answers, inclusion: { in: [ true, false ] }
 
   enum kind: { multiple_choice: 0, essay: 1 }
 end
