@@ -3,7 +3,7 @@
 require "test_helper"
 
 class AnswerTest < ActiveSupport::TestCase
-  fixtures :quizzes, :questions, :quiz_questions, :answers, :tags, :taggables
+  fixtures :quizzes, :questions, :quiz_questions, :answers
 
   def setup
     @answer = answers(:answer_one)
@@ -33,13 +33,5 @@ class AnswerTest < ActiveSupport::TestCase
 
   test "should belong to question" do
     assert_respond_to @answer, :question
-  end
-
-  test "should have many taggables" do
-    assert_respond_to @answer, :taggables
-  end
-
-  test "should have many tags through taggables" do
-    assert_respond_to @answer, :tags
   end
 end

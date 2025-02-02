@@ -3,7 +3,7 @@
 require "test_helper"
 
 class TagTest < ActiveSupport::TestCase
-  fixtures :quizzes, :questions, :quiz_questions, :answers, :tags, :taggables
+  fixtures :quizzes, :questions, :quiz_questions, :tags, :taggables
 
   def setup
     @tag = tags(:tag_one)
@@ -35,9 +35,5 @@ class TagTest < ActiveSupport::TestCase
 
   test "should have many quizzes through taggables" do
     assert_respond_to @tag, :quizzes
-  end
-
-  test "should have many answers through taggables" do
-    assert_respond_to @tag, :answers
   end
 end
